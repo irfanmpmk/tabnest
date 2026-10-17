@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TabNest Settings</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="options">
+  <main>
+    <h1><img src="icons/icon48.png" alt="">TabNest settings</h1>
+
+    <section class="panel">
+      <h2>General</h2>
+      <label class="check">
+        <input type="checkbox" id="autosave">
+        <span>Auto-save my browsing session
+          <small>Keeps a copy of your open tabs so you can get them back after a crash or restart.</small></span>
+      </label>
+      <label class="check">
+        <input type="checkbox" id="badge">
+        <span>Show open tab count on the toolbar icon</span>
+      </label>
+      <label class="check">
+        <input type="checkbox" id="closeAfterSave">
+        <span>Close tabs after saving a session
+          <small>Pinned tabs stay open. Closing saved tabs frees up memory.</small></span>
+      </label>
+    </section>
+
+    <section class="panel">
+      <h2>Keyboard shortcuts</h2>
+      <div class="shortcuts" id="shortcutList"></div>
+      <button type="button" class="btn" id="editShortcuts">Change shortcuts</button>
+    </section>
+
+    <section class="panel">
+      <h2>Backup &amp; restore</h2>
+      <p id="stats"></p>
+      <div class="buttons">
+        <button type="button" class="btn primary" id="export">Export sessions (.json)</button>
+        <button type="button" class="btn" id="importJson">Import from .json file</button>
+        <input type="file" id="importFile" accept=".json,application/json" hidden>
+      </div>
+      <div class="status" id="backupStatus" role="status"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Import from OneTab or a list of links</h2>
+      <p>In OneTab, choose "Export URLs", copy the text and paste it here. A plain list of links (one per line) also works.</p>
+      <textarea class="input" id="urlList" placeholder="https://example.com | Example page"></textarea>
+      <button type="button" class="btn" id="importList">Import links</button>
+      <div class="status" id="listStatus" role="status"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Delete data</h2>
+      <p>Permanently removes every saved session and the auto-saved copy from this browser.</p>
+      <div id="deleteSlot"></div>
+    </section>
+
+    <footer>Your tabs and sessions are stored only on this device. TabNest has no servers and sends nothing anywhere.</footer>
+  </main>
+  <script type="module" src="options.js"></script>
+</body>
+</html>

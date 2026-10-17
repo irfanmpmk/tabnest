@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TabNest</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="popup">
+  <header>
+    <div class="brand"><img src="icons/icon32.png" alt="">TabNest</div>
+    <nav>
+      <button type="button" data-view="tabs" class="active">Tabs<span class="count-pill" id="tabCount"></span></button>
+      <button type="button" data-view="sessions">Sessions</button>
+    </nav>
+    <button type="button" class="icon-btn" id="openOptions" title="Settings"></button>
+  </header>
+
+  <section class="view" id="view-tabs">
+    <input class="input" id="search" type="search" placeholder="Search all tabs… (Enter to jump)" autocomplete="off" autofocus>
+    <div class="toolbar">
+      <button type="button" class="btn" id="dedupe">Close duplicates</button>
+      <button type="button" class="btn" id="sort" title="Sort this window's tabs by website">Sort by site</button>
+    </div>
+    <div class="list" id="tabList"></div>
+  </section>
+
+  <section class="view" id="view-sessions" hidden>
+    <div class="save-box">
+      <input class="input" id="sessionName" type="text" placeholder="Session name (optional)" maxlength="100">
+      <div class="buttons">
+        <button type="button" class="btn primary" id="saveWindow">Save this window</button>
+        <button type="button" class="btn" id="saveAll">Save all windows</button>
+      </div>
+      <label class="check"><input type="checkbox" id="closeAfter"> Close tabs after saving (frees up memory)</label>
+    </div>
+    <div class="list" id="sessionList"></div>
+  </section>
+
+  <div id="toast" role="status"></div>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
