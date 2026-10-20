@@ -1,5 +1,15 @@
 # TabNest: Tab Manager & Session Saver
 
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/cgaadebempfpjppkgpppbpjojklpooop?label=Chrome%20Web%20Store&logo=googlechrome&logoColor=white&color=4f46e5)](https://chromewebstore.google.com/detail/cgaadebempfpjppkgpppbpjojklpooop)
+[![Users](https://img.shields.io/chrome-web-store/users/cgaadebempfpjppkgpppbpjojklpooop?color=4f46e5)](https://chromewebstore.google.com/detail/cgaadebempfpjppkgpppbpjojklpooop)
+[![Rating](https://img.shields.io/chrome-web-store/rating/cgaadebempfpjppkgpppbpjojklpooop?color=4f46e5)](https://chromewebstore.google.com/detail/cgaadebempfpjppkgpppbpjojklpooop/reviews)
+
+**[Install TabNest from the Chrome Web Store](https://chromewebstore.google.com/detail/cgaadebempfpjppkgpppbpjojklpooop)**
+
+Search tabs, close duplicates, and save sessions to restore anytime. 100% private: your data never leaves your device.
+
+![TabNest screenshot](store/screenshot-1-tabs.png)
+
 A Manifest V3 Chrome extension. No build tools, no dependencies, no server.
 
 ## Features
